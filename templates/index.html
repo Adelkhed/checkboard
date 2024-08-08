@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body { background-color:antiquewhite}
+        h1 { text-align: center;}
+        
+        table tr td{
+            text-align: center;
+            width: 60px;
+            height: 60px;
+            
+        }
+        .color1{
+            background-color:{{color1}};
+
+        }
+        .color2{
+            background-color:{{color2}};
+        }
+    </style>
+</head>
+<body>
+    <h1>********* Checker Board   *********</h1>
+    
+    <table style="margin-left:auto; margin-right:auto ;">
+        {%for i in range(y) : %}
+            <tr>
+                {% for j in range(x) : %}
+                    <td class="color{{(i+j)%2+1}}">
+
+                    </td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

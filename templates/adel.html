@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table style="margin-left:auto; margin-right:auto ;">
+        {%for j in range(1,5):%}
+           
+           <tr>
+              {%for i in range(1,9):%}
+               {% if i % 2 ==1:  %}
+                 <td class="color{{i%2}}"></td>
+               {%else:%}
+                   <td class="color{{i%2+2}}"></td>
+               {%endif %}
+              {%endfor%}
+       
+           </tr>
+           <tr>
+               {%for i in range(1,9):%}
+                {% if i % 2 ==1  %}
+                  <td class="color{{i%2+1}}"></td>
+                {%else:%}
+                    <td class="color{{i%2+1}}"></td>
+                {%endif %}
+               {%endfor%}
+        
+            </tr>
+        {%endfor%}
+       </table>
+   
+       <h1>6 by 6 matrix </h1>
+</body>
+</html>
